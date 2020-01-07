@@ -1,0 +1,77 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+// Colors
+$color-lighter: #aeccdc;
+$color-light: #d4e7ef;
+$color-normal: #b3cede;
+$color-regular: #80a4c6;
+$color-dark: #5b7dac;
+$color-darker: #5b79ab;
+$color-flash: #68d7f4;
+
+$grey-normal: #f3f4f5;
+
+// Greys
+$grey-lighter: #eef5f8;
+$grey-light: #f0f0f0;
+$grey-normal: #f3f4f5;
+$grey-regular: #e8e9ea;
+$grey-dark: #ced5da;
+
+// Backgroound
+
+.background {
+  svg {
+    width: 100vw;
+    height: 100vh;
+
+    path {
+      transition: all 1s linear;
+      transform-origin: center center;
+    }
+  }
+}
+
+.mosaique {
+  svg {
+    #vector-11 {
+      transform-box: fill-box;
+      transform-origin: center;
+      transform: translateX(300px) translateY(-185px) rotate(0deg);
+    }
+    #vector-13 {
+      transform-box: fill-box;
+      transform-origin: center;
+      transform: translateX(300px) translateY(-219px) rotate(0deg);
+    }
+    #vector-35 {
+      transform-box: fill-box;
+      transform-origin: center;
+      transform: translateX(300px) translateY(20px) rotate(0deg);
+    }
+
+    // #vector-47 {
+    //   transform-box: fill-box;
+    //   transform-origin: center;
+    //   transform: translateX(180px) rotate(45deg);
+    // }
+  }
+}
+
+.container-center {
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+  left: 25%;
+  right: 50%;
+  width: 50%;
+  height: 50%;
+  border: 1px solid grey;
+  margin: auto;
+}

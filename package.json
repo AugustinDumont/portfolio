@@ -1,0 +1,34 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio with geometric animation svg",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch assets/scss -o assets/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AugustinDumont/portfolio.git"
+  },
+  "keywords": [
+    "portfolio",
+    "-",
+    "svg",
+    "animation",
+    "-",
+    "description",
+    "-",
+    "Augustin",
+    "Dumont"
+  ],
+  "author": "Augustin Dumont",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AugustinDumont/portfolio/issues"
+  },
+  "homepage": "https://github.com/AugustinDumont/portfolio#readme",
+  "dependencies": {
+    "node-sass": "^4.13.0"
+  }
+}

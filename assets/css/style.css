@@ -1,0 +1,39 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: relative; }
+
+.background svg {
+  width: 100vw;
+  height: 100vh; }
+  .background svg path {
+    transition: all 1s linear;
+    transform-origin: center center; }
+
+.mosaique svg #vector-11 {
+  transform-box: fill-box;
+  transform-origin: center;
+  transform: translateX(300px) translateY(-185px) rotate(0deg); }
+
+.mosaique svg #vector-13 {
+  transform-box: fill-box;
+  transform-origin: center;
+  transform: translateX(300px) translateY(-219px) rotate(0deg); }
+
+.mosaique svg #vector-35 {
+  transform-box: fill-box;
+  transform-origin: center;
+  transform: translateX(300px) translateY(20px) rotate(0deg); }
+
+.container-center {
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+  left: 25%;
+  right: 50%;
+  width: 50%;
+  height: 50%;
+  border: 1px solid grey;
+  margin: auto; }
