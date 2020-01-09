@@ -10,6 +10,8 @@ body {
   position: relative;
 }
 
+
+
 // GRID
 .top-left {
   grid-column: 1;
@@ -33,10 +35,44 @@ body {
 }
 
 .bottom-right {
+  display: grid;
   grid-column: 2;
   grid-row: 2;
   max-height: 100%;
   max-width: 100%;
+
+  .bottom-right-top-left {
+    grid-column: 1;
+    grid-row: 1;
+    max-height: 100%;
+    max-width: 100%;
+  }
+
+  .bottom-right-top-right {
+    grid-column: 2;
+    grid-row: 1;
+    max-height: 100%;
+    max-width: 100%;
+  }
+
+  .bottom-right-bottom-left {
+    grid-column: 1;
+    grid-row: 2;
+    max-height: 100%;
+    max-width: 100%;
+  }
+
+  .bottom-right-bottom-right {
+    grid-column: 2;
+    grid-row: 2;
+    max-height: 100%;
+    max-width: 100%;
+  }
+}
+
+:root {
+  --color-lighter: #aeccdc;
+
 }
 
 // COLORS
@@ -56,6 +92,9 @@ $grey-light: #f0f0f0;
 $grey-normal: #f3f4f5;
 $grey-regular: #e8e9ea;
 $grey-dark: #ced5da;
+
+// Dark
+$dark-purple: rgb(29, 3, 41);
 
 // BACKGROUND SVG
 .background {
@@ -400,6 +439,7 @@ $grey-dark: #ced5da;
   width: 2px;
   height: 2px;
 }
+
 ::-webkit-scrollbar-button {
   width: 2px;
   height: 2px;
@@ -409,53 +449,140 @@ $grey-dark: #ced5da;
   height: 100%;
   width: 100%;
   position: relative;
+
   ul {
     position: relative;
     position: absolute;
     display: block;
-    top: 25%;
-    left: 0;
+    top: 10%;
+    left: -10%;
     width: auto;
     height: 100%;
     margin: 0;
-    background: #abc;
     overflow-y: auto;
     overflow-x: hidden;
     transform: rotate(-90deg) translateY(-80px);
     transform-origin: right top;
     padding: 10px;
-    .line {
-      position: absolute;
-      left: 50%;
-      height: 100%;
-      width: 1px;
-      background: black;
-      z-index: 1;
+    opacity: 0.8;
+
+    &:hover {
+      opacity: 1;
     }
 
     li {
       position: relative;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: center;
-      padding: 5px;
-      background: #cab;
+      padding: 15px;
       transform: rotate(90deg);
       width: 200px;
       height: 200px;
-      margin: 10px;
+      margin: 20px;
+      border-top: 2px dashed $dark-purple;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: -9px;
+        right: -18px;
+        height: 15px;
+        width: 15px;
+        background: $color-dark;
+        border-radius: 50%;
+      }
+
+      &:first-child::before {
+        content: "";
+        position: absolute;
+        top: -9px;
+        left: -18px;
+        height: 15px;
+        width: 15px;
+        background: $color-dark;
+        border-radius: 50%;
+      }
+
       a {
         text-decoration: none;
         list-style-type: none;
-        color: #000;
+        color: $color-dark;
+        padding: 5px;
       }
+
       .text-wrapper {
         position: absolute;
         left: 50%;
-        transform: translateX(-50%) translateY(-20px);
-        height: 70px;
-        width: 70px;
-        border: 1px solid red;
+        transform: translateX(-50%) translateY(10px);
+        height: 150px;
+        width: 150px;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.5s;
+        z-index: 1;
+        background-position: 50% 50%;
+        background-size: cover;
+        border-radius: 5%;
+
+        .black-filter {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 100%;
+          background: rgba(27, 20, 20, 0.8);
+          border-radius: 5%;
+
+
+          h2 {
+            font-size: 13px;
+            text-align: center;
+            color: $color-flash;
+            margin-bottom: 0;
+          }
+
+          p {
+            color: $grey-lighter;
+            font-size: 12px;
+            font-style: italic;
+            opacity: 1;
+            text-align: center;
+            font-weight: bolder;
+          }
+        }
+      }
+
+      .social-engineering {
+        background-image: url(../images/postit.jpg);
+
+      }
+
+      .sibelga {
+        background-image: url(../images/sibelga.png);
+      }
+
+      .declic {
+        background-image: url(../images/declic.png);
+      }
+
+      .naacao {
+        background-image: url(../images/naacaob.png);
+      }
+
+      .becode {
+        background-image: url(../images/becode.jpg);
+      }
+
+
+
+      .date-wrapper {
+        color: $color-dark;
+        width: 100%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-30%) translateY(-20px);
         visibility: hidden;
         opacity: 0;
         transition: 0.5s;
@@ -464,27 +591,92 @@ $grey-dark: #ced5da;
 
       &:hover {
         a {
-          background: #000;
-          color: #fff;
+          color: $grey-light;
+          background-color: $color-dark;
         }
 
         .text-wrapper {
           visibility: visible;
           opacity: 1;
-          transform: translateX(-50%) translateY(-60px);
+          transform: translateX(-50%) translateY(40px);
         }
-      }
-    }
-    li:nth-child(even) {
-      .text-wrapper {
-        transform: translateX(-50%) translateY(20px);
-      }
 
-      &:hover {
-        .text-wrapper {
-          transform: translateX(-50%) translateY(60px);
+        .date-wrapper {
+          width: 100%;
+          visibility: visible;
+          opacity: 1;
+          transform: translateX(-30%) translateY(-40px);
+        }
+
+        &::after {
+          background: $color-flash;
+        }
+
+        &:first-child::before {
+          background: $color-flash;
         }
       }
     }
   }
+}
+
+
+// PROJECTS
+
+.bottom-right-top-left,
+.bottom-right-top-right,
+.bottom-right-bottom-left,
+.bottom-right-bottom-right {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+
+  .picture-wrapper {
+    position: relative;
+    height: 90%;
+    width: 90%;
+    background-position: 50% 50%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+
+    .content-wrapper {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      transform: scaleY(0);
+      transition: transform 200ms ease-in;
+      background: rgba(0, 0, 0, .8);
+
+      h2 {
+        font-size: 13px;
+        color: $color-flash;
+      }
+    }
+
+    &:hover {
+      .content-wrapper {
+        transform: scaleY(1);
+      }
+    }
+  }
+}
+
+.robinwood {
+  background-image: url(../images/robinwood.png);
+}
+
+.troufkash {
+  background-image: url(../images/troufkash.png);
+}
+
+.hacker-poulette {
+  background-image: url(../images/hacker-poulette.png);
+  background-size: 100% 100%;
+}
+
+.composition {
+  background-image: url(../images/composition.png);
+  background-size: 100% 100%;
 }
