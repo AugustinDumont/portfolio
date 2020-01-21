@@ -1,0 +1,321 @@
+// SKILLS
+.bottom-left {
+    padding: 0% 10% 10% calc(10% + 30px);
+    display: grid;
+    grid-template-columns: 30% 70%;
+
+    .skills-categories {
+        grid-column: 1;
+        box-shadow: 0px 3px 12px grey;
+        border: 4px double var(--color-darker);
+        border-right: none;
+        user-select: none;
+
+        ul {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+
+
+            li {
+                font-family: 'Open Sans Condensed', sans-serif;
+                font-weight: 700;
+                font-size: 1em;
+                letter-spacing: 1px;
+                height: 25%;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-transform: uppercase;
+                color: #fff;
+                background: var(--color-darker);
+                cursor: pointer;
+                transition: 300ms ease-in-out;
+
+                &:hover {
+                    background: #eee;
+                    color: var(--color-darker);
+                }
+            }
+        }
+    }
+
+
+    .skills-details {
+        grid-column: 2;
+        display: flex;
+        align-items: center;
+        background: #eee;
+        border: 4px double var(--color-darker);
+        border-left: none;
+        box-shadow: 7px 7px 9px lightgrey;
+        user-select: none;
+
+        li {
+            font-family: 'Open Sans Condensed', sans-serif;
+            text-transform: uppercase;
+            list-style-type: none;
+        }
+
+        p {
+            font-family: 'Open Sans Condensed', sans-serif;
+            opacity: 0.9;
+            font-size: 0.8em;
+            margin: 5px 20px;
+
+            .bolder {
+                font-weight: 600;
+                color: #fff;
+                background: var(--color-darker);
+                padding: 1px 5px;
+            }
+        }
+    }
+
+    #technologies-content {
+        position: relative;
+        display: block;
+    }
+
+
+    #entrepreneurship-content {
+        position: relative;
+        display: none;
+
+        p {
+            font-size: 0.9em;
+        }
+
+        h3 {
+            font-family: 'Open Sans Condensed', sans-serif;
+            text-transform: uppercase;
+            font-size: 0.9em;
+            color: #fff;
+            background: var(--color-darker);
+            width: 50%;
+            padding-left: 5px;
+            margin-bottom: 3px;
+
+            &:hover {
+                color: var(--color-darker);
+                background: #eee;
+            }
+        }
+
+        li {
+            font-size: 0.8em;
+        }
+    }
+
+    #languages-content {
+        position: relative;
+        display: none;
+
+        p {
+            font-size: 1em;
+        }
+
+        li {
+            font-size: 0.9em;
+            padding-left: 5px;
+            width: 35%;
+            color: #fff;
+            margin-top: 10px;
+            background: var(--color-darker);
+            font-weight: 700;
+            border-radius: 2%;
+            display: flex;
+            justify-content: center;
+
+            &:hover {
+                color: var(--color-darker);
+                background: #eee;
+            }
+
+        }
+    }
+
+    #softskills-content {
+        position: relative;
+        display: none;
+
+        p {
+            font-size: 1em;
+        }
+
+        li {
+            padding-left: 5px;
+            width: 50%;
+            color: #fff;
+            margin-top: 20px;
+            background: var(--color-darker);
+            font-weight: 700;
+            border-radius: 2%;
+            display: flex;
+            justify-content: center;
+
+            &:hover {
+                color: var(--color-darker);
+                background: #eee;
+            }
+        }
+    }
+
+
+    .wrapper-linkedin {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        height: 25px;
+        width: 25px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #fff;
+        transition: 300ms ease-in-out;
+        cursor: pointer;
+
+        .fa-linkedin-in {
+            font-size: 15px;
+            color: var(--color-darker);
+        }
+
+        &:hover {
+            background: var(--color-darker);
+
+            .fa-linkedin-in {
+                color: #fff;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .bottom-left {
+        padding: 0% 10% 10% 15%;
+    }
+
+    .bottom-left .skills-categories ul li {
+        font-size: 0.7em !important;
+    }
+
+    .bottom-left .skills-details li {
+        font-size: 0.7em;
+    }
+
+    .bottom-left .skills-details p {
+        font-size: 0.6em;
+    }
+
+    .bottom-left #entrepreneurship-content p {
+        font-size: 0.7em !important;
+    }
+
+    .bottom-left #entrepreneurship-content h3 {
+        font-size: 0.7em !important;
+        width: 40%;
+    }
+
+    .bottom-left #entrepreneurship-content li {
+        font-size: 0.6em !important;
+    }
+
+    .bottom-left #languages-content p {
+        font-size: 0.7em !important;
+    }
+
+    .bottom-left #languages-content li {
+        font-size: 0.7em !important;
+        width: 40%;
+        margin-top: 2px;
+    }
+
+    small {
+        font-size: 0.6em;
+    }
+
+    .bottom-left #softskills-content p {
+        font-size: 0.7em !important;
+    }
+
+    .bottom-left #softskills-content li {
+        font-size: 0.7em !important;
+        width: 40% !important;
+    }
+}
+
+@media only screen and (max-width: 414px) {
+    .bottom-left {
+        margin-top: -10%;
+        padding: 0% 6% 10% 6%;
+    }
+
+    .bottom-left .skills-categories,
+    .bottom-left .skills-details {
+        height: 100%;
+        box-shadow: none;
+    }
+
+
+    .bottom-left .skills-categories ul li {
+        font-size: 0.7em !important;
+    }
+
+    .bottom-left .skills-details li,
+    .bottom-left .skills-details p {
+        font-size: 0.7em;
+    }
+
+    .bottom-left .skills-details p .bolder {
+        padding: 0px 2px;
+    }
+
+    .bottom-left #entrepreneurship-content p,
+    .bottom-left #entrepreneurship-content h3,
+    .bottom-left #entrepreneurship-content li {
+        font-size: 0.7em !important;
+    }
+
+    .bottom-left #entrepreneurship-content h3 {
+        width: 60%;
+    }
+
+    .bottom-left #languages-content li {
+        width: 40%;
+    }
+
+    .bottom-left #softskills-content li {
+        width: 60% !important;
+        margin-top: 10px;
+    }
+
+    .bottom-left .wrapper-linkedin {
+        height: 20px;
+        width: 20px;
+
+        .bottom-left .wrapper-linkedin .fa-linkedin-in {
+            font-size: 10px;
+        }
+    }
+
+    .bottom-left .skills-details,
+    .bottom-left .skills-categories {
+        min-height: 225px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .bottom-left {
+        margin-top: -12%;
+        z-index: 9999;
+    }
+
+    .bottom-left #entrepreneurship-content p,
+    .bottom-left #entrepreneurship-content h3,
+    .bottom-left #entrepreneurship-content li {
+        font-size: 0.6em !important;
+    }
+}

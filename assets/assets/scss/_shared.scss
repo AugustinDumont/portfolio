@@ -1,0 +1,118 @@
+:root {
+  --color-body: #eee; // BLUE
+  --color-lighter: #496d7e; // #aeccdc
+  --color-light: #045267; // #d4e7ef
+  --color-normal: #275979; // #b3cede;
+  --color-regular: #368099; // #80a4c6
+  --color-dark: #7fadbd; // #5b7dac
+  --color-darker: #3b7481; // #5b79ab
+  --color-flash: #b2c9e4; // #68d7f4
+}
+
+// Greys
+$grey-normal: #f3f4f5;
+$grey-lighter: #eef5f8;
+$grey-light: #f0f0f0;
+$grey-normal: #f3f4f5;
+$grey-regular: #e8e9ea;
+$grey-dark: #ced5da;
+
+// Dark
+$dark-purple: rgb(29, 3, 41);
+
+// GRID STRUCTURE
+
+main {
+  grid-template-columns: 50vw 50vw;
+  grid-template-rows: 50vh 50vh;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.top-left {
+  grid-column: 1;
+  grid-row: 1;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.top-right {
+  grid-column: 2;
+  grid-row: 1;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.bottom-left {
+  grid-column: 1;
+  grid-row: 2;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.bottom-right {
+  display: grid;
+  grid-column: 2;
+  grid-row: 2;
+  max-height: 100%;
+  max-width: 100%;
+
+  .bottom-right-top-left {
+    grid-column: 1;
+    grid-row: 1;
+    max-height: 100%;
+    max-width: 100%;
+  }
+
+  .bottom-right-top-right {
+    grid-column: 2;
+    grid-row: 1;
+    max-height: 100%;
+    max-width: 100%;
+  }
+
+  .bottom-right-bottom-left {
+    grid-column: 1;
+    grid-row: 2;
+    max-height: 100%;
+    max-width: 100%;
+  }
+
+  .bottom-right-bottom-right {
+    grid-column: 2;
+    grid-row: 2;
+    max-height: 100%;
+    max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  main {
+    grid-template-columns: 100vw 100vw;
+    grid-template-rows: 25vh 25vh 25vh 25vh;
+    position: block;
+  }
+
+  .top-left {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .top-right {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .bottom-left {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .bottom-right {
+    grid-column: 1;
+    grid-row: 4;
+  }
+}
