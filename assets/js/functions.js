@@ -14,16 +14,16 @@ blue.addEventListener("click", () => {
   document.documentElement.style.setProperty("--color-flash", "#B2C9E4");
 });
 
-// purple.addEventListener("click", () => {
-//     document.documentElement.style.setProperty("--color-body", "#f3f3f3");
-//     document.documentElement.style.setProperty("--color-lighter", "#5c5174");
-//     document.documentElement.style.setProperty("--color-light", "#66669a");
-//     document.documentElement.style.setProperty("--color-normal", "#aaa7cc");
-//     document.documentElement.style.setProperty("--color-regular", "#926d88");
-//     document.documentElement.style.setProperty("--color-dark", "#aaa7cc");
-//     document.documentElement.style.setProperty("--color-darker", "#66669a");
-//     document.documentElement.style.setProperty("--color-flash", "#be9fbf");
-// })
+purple.addEventListener("click", () => {
+  document.documentElement.style.setProperty("--color-body", "#f3f3f3");
+  document.documentElement.style.setProperty("--color-lighter", "#5c5174");
+  document.documentElement.style.setProperty("--color-light", "#66669a");
+  document.documentElement.style.setProperty("--color-normal", "#aaa7cc");
+  document.documentElement.style.setProperty("--color-regular", "#926d88");
+  document.documentElement.style.setProperty("--color-dark", "#aaa7cc");
+  document.documentElement.style.setProperty("--color-darker", "#66669a");
+  document.documentElement.style.setProperty("--color-flash", "#be9fbf");
+})
 
 green.addEventListener("click", () => {
   document.documentElement.style.setProperty("--color-body", "#eee");
@@ -50,6 +50,9 @@ ocre.addEventListener("click", () => {
 
 document.getElementById("click-to-start").addEventListener("click", () => {
   document.getElementById("background-svg").classList.remove("mosaique");
+});
+document.getElementById("click-to-back").addEventListener("click", () => {
+  document.getElementById("background-svg").classList.add("mosaique");
 });
 
 $(document).ready(function () {
@@ -109,3 +112,26 @@ document.getElementById("close").addEventListener("click", () => {
   document.getElementById("modal").style.opacity = 0;
   document.getElementById("modal").style.visibility = "hidden";
 })
+
+
+let switchtoFrench = document.querySelectorAll(".french");
+let switchtoEnglish = document.querySelectorAll(".english");
+
+document.getElementById("to-english").addEventListener("click", () => {
+  switchtoEnglish.forEach(element => {
+    element.style.display = "block";
+  });
+  switchtoFrench.forEach(element => {
+    element.style.display = "none";
+  });
+});
+
+
+document.getElementById("to-french").addEventListener("click", () => {
+  switchtoEnglish.forEach(element => {
+    element.style.display = "none";
+  });
+  switchtoFrench.forEach(element => {
+    element.style.display = "block";
+  });
+});

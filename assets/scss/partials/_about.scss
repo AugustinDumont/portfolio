@@ -28,8 +28,7 @@
             font-style: "regular";
             font-weight: 700;
             text-align: justify;
-            background: #eee;
-            padding: 0 30px 30px 30px;
+            padding: 0 0px 40px 30px;
             letter-spacing: 1px;
             user-select: none;
         }
@@ -44,11 +43,11 @@
     .icons-contact-wrapper {
         display: flex;
         position: absolute;
-        right: calc(10% + 30px);
+        right: 10%;
         bottom: 0;
 
 
-        .mail-wrapper {
+        .contact-details-wrapper {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -61,7 +60,10 @@
             box-shadow: 2px 2px 3px lightgrey;
             cursor: pointer;
 
-            .fa-envelope {
+            .fa-envelope,
+            .fa-at,
+            .fa-phone,
+            a {
                 color: var(--color-darker);
                 font-size: 15px;
             }
@@ -69,7 +71,10 @@
             &:hover {
                 background: var(--color-darker);
 
-                .fa-envelope {
+                .fa-envelope,
+                .fa-at,
+                .fa-phone {
+
                     color: #fff;
                 }
 
@@ -78,44 +83,47 @@
 
         a {
             text-decoration: none;
-        }
-
-        .cv-wrapper {
-            display: flex;
-            justify-content: center;
-            align-items: center;
             color: var(--color-darker);
-            background: #fff;
-            height: 30px;
-            width: 30px;
-            border-radius: 50%;
-            text-decoration: none;
-            font-weight: 700;
-            transition: 200ms ease-in;
-            font-size: 13px;
-            box-shadow: 2px 2px 3px lightgrey;
+            font-weight: 600;
 
             &:hover {
                 color: #fff;
-                background: var(--color-darker);
             }
         }
+    }
+
+    .mailto {
+        display: none;
     }
 }
 
 @media only screen and (max-width: 768px) {
     .top-left .text-wrapper h1 {
-        font-size: 2em;
+        text-align: center;
+        margin: 5% 0% 0% -5%;
+    }
+
+    #mail {
+        display: none;
+    }
+
+    .mailto {
+        display: block !important;
+    }
+
+    .top-left .text-wrapper h1 {
+        font-size: 3em;
     }
 
     .top-left .text-wrapper p {
+        background: none;
         font-size: 0.8em;
         padding: 10px 30px 30px 30px;
     }
 
     .top-left .icons-contact-wrapper {
         right: 11%;
-        bottom: 5%;
+        bottom: 8%;
     }
 }
 
@@ -125,14 +133,15 @@
     }
 
     .top-left .text-wrapper h1 {
-        font-size: 3em;
+        font-size: 2.2em;
         padding-left: 0;
-        margin: 5% 0% 0% 5%;
+        margin: 1% 0% 0% calc(5% + 5px);
+        text-align: left;
     }
 
     .top-left .text-wrapper p {
         font-size: 0.8em;
-        padding: 10px 5px 10px 5px;
+        padding: 2px 5px 10px 5px;
         margin: 0 5%;
     }
 
@@ -141,17 +150,17 @@
         bottom: -10%;
     }
 
-    .top-left .icons-contact-wrapper .mail-wrapper,
-    .top-left .icons-contact-wrapper .cv-wrapper {
+    .top-left .icons-contact-wrapper .contact-details-wrapper {
         height: 25px;
         width: 25px;
         font-size: 13px;
     }
 
-    .top-left .icons-contact-wrapper .mail-wrapper .fa-envelope {
+    .top-left .icons-contact-wrapper .contact-details-wrapper .fa-at,
+    .top-left .icons-contact-wrapper .contact-details-wrapper .fa-phone,
+    .top-left .icons-contact-wrapper .contact-details-wrapper a {
         font-size: 13px;
     }
-
 }
 
 @media only screen and (max-width: 375px) {
@@ -168,4 +177,8 @@
             font-size: 0.7em;
         }
     }
+}
+
+.english {
+    display: none;
 }

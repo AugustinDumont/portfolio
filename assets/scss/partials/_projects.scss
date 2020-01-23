@@ -166,7 +166,7 @@
 
 @media only screen and (max-width: 414px) {
     .bottom-right {
-        padding-top: 15%;
+        padding-top: 0%;
     }
 
     .bottom-right .item-wrapper {
@@ -176,25 +176,25 @@
 
     .bottom-right .item-wrapper .robinwood {
         &::after {
-            content: "Rob'in Wood";
+            content: "Rob'in Wood - HTML5 Css3 Bootstrap"
         }
     }
 
     .bottom-right .item-wrapper .trouvkash {
         &::after {
-            content: "Troufkash";
+            content: "Troufkash - React Leaflet MongoDB";
         }
     }
 
     .bottom-right .item-wrapper .composition {
         &::after {
-            content: "Composition";
+            content: "Composition - WordPress";
         }
     }
 
-    .bottom-right .item-wrapper .communswillgrow {
+    .bottom-right .item-wrapper .commonswillgrow {
         &::after {
-            content: "Communs will grow";
+            content: "Commons- React GraphQL WordPress";
         }
     }
 
@@ -205,12 +205,12 @@
             bottom: 0;
             left: 0;
             right: 0;
-            background: rgba(0, 0, 0, .8);
+            background: rgba(0, 0, 0, .7);
             font-family: 'Open Sans Condensed', sans-serif;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5em;
+            font-size: 0.8em;
             font-weight: 600;
             text-transform: uppercase;
             text-shadow: 0.5px 0.5px 0px white;
@@ -221,7 +221,7 @@
 
 
     .bottom-right .owl-carousel .owl-nav {
-        top: 33%;
+        top: 21%;
     }
 
     .bottom-right .owl-carousel .owl-nav .owl-prev {
@@ -235,7 +235,7 @@
 
 @media only screen and (max-width: 375px) {
     .bottom-right {
-        padding-top: 21%;
+        padding-top: 14%;
     }
 
     .bottom-right .item-wrapper {
@@ -244,6 +244,12 @@
     }
 
     .bottom-right .owl-carousel .owl-nav {
-        top: 15%;
+        top: 11%;
+    }
+}
+
+@media only screen and (max-width: 335px) {
+    .bottom-right {
+        padding-top: 20%;
     }
 }

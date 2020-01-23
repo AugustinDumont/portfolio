@@ -31,5 +31,6 @@ if (isset($_POST['submit'])) {
     if ($counter == 0) {
         $msg =  $msg_body . "\n" . $name . "\n" . $email;
         mail("contact@augustindumont.be", "Vous avez un message", $msg, "From: noreply@augustindumont.be");
+        header("Location:index.html#$MainBackground");
     }
 }
